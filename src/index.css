@@ -1,0 +1,113 @@
+@import url(https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular);
+@import url(https://db.onlinewebfonts.com/c/040a78b437acd0433612f92e61d04a1b?family=Gilroy-Medium);
+@import url(https://db.onlinewebfonts.com/c/000833a3a58fb083c44b9de42c2ff0a2?family=Gilroy-SemiBold);
+@import url(https://db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 204.83, 61.7%, 46.08%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --grey: #484848;
+  }
+}
+
+@layer base {
+  html {
+    font-family: "Gilroy-Regular";
+    background: #F8FAFF;
+  }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.slick-slide {
+  margin-bottom: 25px;
+}
+
+.slick-dots {
+    display: flex;
+    margin: 0 !important;
+    margin-top: 18px !important;
+    padding: 0rem 1rem !important;
+    list-style-type: none;
+    @media (max-width: 480px) {
+      display: none !important;
+    }
+}
+.slick-dots li {
+    margin: 0px 20px !important;
+    width: 0;
+}
+
+.slick-dots li button::before {
+  width: 0;
+}
+.slick-dots button {
+    display: block !important;
+    padding: 0 !important;
+    border: none;    
+    width: 3px !important;
+    height: 3px !important;
+    border-radius: 58px;
+    text-indent: -9999px;
+    transition: all .1s;
+    background: #0063A9 !important;
+}
+
+li.slick-active button {
+    width: 33px !important;
+    /* margin: 0 -20px; */
+    margin-left: -15px !important; 
+}
+
+
+
+.scrollbar_primary::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+/* Track */
+.scrollbar_primary::-webkit-scrollbar-track {
+  background: #cdcdcd;
+  border-radius: 5px;
+}
+/* Handle */
+.scrollbar_primary::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 5px;
+}
+/* Handle on hover */
+.scrollbar_primary::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
